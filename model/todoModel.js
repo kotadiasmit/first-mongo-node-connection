@@ -6,26 +6,27 @@ const TodoSchema = new Schema({
   name: {
     type: String,
     unique: true,
-    require: true,
-    minlength: 4,
+    required: true,
+    minlength: 3,
     maxlength: 15,
   },
   title: {
     type: String,
     minlength: 4,
     maxlength: 30,
-    require: true,
+    required: true,
   },
   description: {
     type: String,
-    require: true,
+    required: true,
   },
   date: {
     type: Date,
-    require: true,
+    required: true,
   },
   id: {
     type: String,
+    unique: true,
   },
 });
 

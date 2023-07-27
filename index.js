@@ -1,6 +1,6 @@
 import express from "express";
-import router from "./route/index.js";
 import mongoose from "mongoose";
+import router from "./route/todoRoute.js";
 
 const app = express();
 const port = 5000;
@@ -10,7 +10,7 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(async (res) => {
+  .then((res) => {
     app.listen(port, () => {
       console.log(`connected to ${port}`);
       console.log("connect to database");
